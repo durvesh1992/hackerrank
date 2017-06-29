@@ -24,3 +24,11 @@ print re.split(r'[a-fA-Z0-9]', line)
 # Multiline or ignore case
 line = "Here are some words"
 print re.split(r'[a-f]', line, re.I | re.M)
+
+# digits
+line = "Here are some words0987"
+print re.findall(r'\d', line, re.I | re.M)
+
+# non digits
+line = "Here are some words0987"
+print re.findall(r'\D', line, re.I | re.M)
