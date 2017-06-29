@@ -32,3 +32,11 @@ print re.findall(r'\d', line, re.I | re.M)
 # non digits
 line = "Here are some words0987"
 print re.findall(r'\D', line, re.I | re.M)
+
+# get number from string
+line = "ocinwe324 main st. words0987"
+print re.findall(r'\d{1,9}', line)
+
+# address
+line = "ocinwe324 main st. words0987"
+print re.findall(r'\d{1,9}\s\w+\s\w+\.', line)
